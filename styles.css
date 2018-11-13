@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower|Orbitron|Roboto+Mono");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(156, 241, 247, 0.8);
+}
+
+/* -- Header section -- */
+header {
+  background: #44444496;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow: 1px 1px 3px #333;
+}
+header > h1 > span {
+  font-size: 2.5rem;
+  color: #333;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+/* -- Score-board section -- */
+.score-board {
+  position: relative;
+  text-align: center;
+  margin: 20px auto;
+  width: 500px;
+  height: 200px;
+}
+.score-board .board-title {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Indie Flower", cursive;
+  padding: 5px 25px 30px 25px;
+  border-radius: 5px;
+  color: rgb(95, 95, 95);
+  transition: 0.3s all;
+}
+.score-board #player-side {
+  top: 5%;
+  left: 5%;
+  width: 170px;
+  border: 5px solid #fff;
+}
+.score-board #computer-side {
+  top: 5%;
+  right: 5%;
+  width: 170px;
+  border: 5px solid #fff;
+}
+.score-board .name {
+  text-decoration: underline;
+}
+.score-board #player-score,
+.score-board #computer-score {
+  font-size: 4rem;
+  margin-top: 25px;
+  font-family: "Orbitron", sans-serif;
+  color: rgb(51, 51, 51);
+}
+
+/* -- Result section -- */
+.result-section {
+  margin: 0 auto;
+  width: 300px;
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+}
+.result-section .vs {
+  color: tomato;
+  font-family: "Indie Flower", cursive;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.result-section #player-result {
+  position: absolute;
+  font-size: 3.5rem;
+  right: 80%;
+  color: rgb(248, 185, 133);
+  text-shadow: 1px 1px 2px #333;
+}
+.result-section #computer-result {
+  position: absolute;
+  font-size: 3.5rem;
+  left: 80%;
+  color: rgb(248, 185, 133);
+  text-shadow: 1px 1px 2px #333;
+}
+
+/* -- Game section -- */
+.game-section {
+  font-size: 7rem;
+  color: rgb(226, 220, 168);
+  text-align: center;
+  padding-top: 10px;
+}
+.game-section > div {
+  display: inline-block;
+  margin: 40px;
+  padding: 7px;
+  width: 150px;
+  height: 150px;
+  background: rgb(241, 241, 241);
+  border-radius: 50%;
+  text-shadow: 0px -2px 1px rgb(148, 148, 148);
+  box-shadow: 0px 6px 1px #6b6b6b;
+  transition: 0.1s ease-out;
+}
+.game-section > div:hover {
+  cursor: pointer;
+}
+.game-section > div:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+/* -- message-section -- */
+.message-section {
+  padding-top: 10px;
+  font-size: 1.7rem;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+  color: #444444;
+}
+
+/* -- Reset-button section -- */
+.reset-section {
+  position: absolute;
+  top: 90%;
+  right: 10%;
+}
+#reset-btn {
+  all: unset;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  background: tomato;
+  border-radius: 5px;
+  border-bottom: 3px solid red;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: "Roboto Mono", monospace;
+  transition: 0.08s all ease-in;
+  cursor: pointer;
+}
+#reset-btn:active {
+  transform: translateY(2.7px);
+  border-bottom: 0.5px solid red;
+}
+
+/* -- JavaScript command section -- */
+.winner-glow {
+  /* border: 5px solid #4dcc7d; */
+  box-shadow: 0 0 15px #4dcc7d;
+}
+.loser-glow {
+  /* border: 5px solid #fc121b; */
+  box-shadow: 0 0 15px tomato;
+}
+.draw-glow {
+  /* border: 5px solid rgb(255, 255, 97); */
+  box-shadow: 0 0 15px rgb(226, 226, 110);
+}
